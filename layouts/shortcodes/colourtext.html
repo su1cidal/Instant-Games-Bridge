@@ -1,0 +1,8 @@
+{{ $colour := .Get 0 | safeCSS }}
+<code style="font color= {{ $colour }};"> 
+  <span style="
+      color: {{ $colour }};
+      ">
+      {{ .Inner | .Page.RenderString }}
+  </span>
+</code>

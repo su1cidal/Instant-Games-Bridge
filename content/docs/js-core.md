@@ -22,7 +22,8 @@ index.html
 </html>
 ```
 
-При запуске игры на поддерживаемых платформах SDK автоматически подключит нужные скрипты платформ. На неподдерживаемой платформе не будет каких-либо ошибок, подставится платформа-заглушка Mock и при вызове какого-либо запроса будет возвращаться `false`, `reject` и т.д.
+При запуске игры на поддерживаемых платформах SDK автоматически подключит нужные скрипты платформ.
+На неподдерживаемой платформе не будет каких-либо ошибок, подставится платформа-заглушка Mock и при вызове какого-либо запроса будет возвращаться `false`, `reject` и т.д.
 
 ## **Инициализация**
 
@@ -136,12 +137,12 @@ bridge.platform.tld
 
 |     Платформа     |       Формат ссылки   |
 |-------------------|-----------------------|
-| VK                | `null` |
+| VK                | {{< colourtext red  >}}null{{< /colourtext >}} |
 | Yandex            | `com`,`ru`, etc. |
-| Crazy Games       | `null` |
-| Absolute Games    | `null` |
-| Game Distribution | `null` |
-| Mock              | `null` |
+| Crazy Games       | {{< colourtext red  >}}null{{< /colourtext >}} |
+| Absolute Games    | {{< colourtext red  >}}null{{< /colourtext >}} |
+| Game Distribution | {{< colourtext red  >}}null{{< /colourtext >}} |
+| Mock              | {{< colourtext red  >}}null{{< /colourtext >}} |
 
 
 ### **Отправка сообщения платформе**
@@ -179,12 +180,12 @@ bridge.player.isAuthorizationSupported
 
 | Платформа         | Возможные значения |
 |-------------------|--------------------|
-| VK                | `true`               |
-| Yandex            | `true`               |
-| Crazy Games       | `false`             |
-| Absolute Games    | `true`               |
-| Game Distribution | `false`              |
-| Mock              | `false`              |
+| VK                | {{< colourtext green >}}true{{< /colourtext >}}               |
+| Yandex            | {{< colourtext green >}}true{{< /colourtext >}}               |
+| Crazy Games       | {{< colourtext red >}}false{{< /colourtext >}}             |
+| Absolute Games    | {{< colourtext green >}}true{{< /colourtext >}}               |
+| Game Distribution | {{< colourtext red >}}false{{< /colourtext >}}              |
+| Mock              | {{< colourtext red >}}false{{< /colourtext >}}              |
 
 ### **Авторизован ли игрок в данный момент**
 
@@ -194,12 +195,12 @@ bridge.player.isAuthorized
 
 | Платформа         | Возможные значения |
 |-------------------|--------------------|
-| VK                | `true`               |
-| Yandex            | `true`/`false`      |
-| Crazy Games       | `false`              |
-| Absolute Games    | `true`/`false`      |
-| Game Distribution | `false`              |
-| Mock              | `false`              |
+| VK                | {{< colourtext green >}}true{{< /colourtext >}}               |
+| Yandex            | {{< colourtext green >}}true{{< /colourtext >}}/{{< colourtext red >}}false{{< /colourtext >}}      |
+| Crazy Games       | {{< colourtext red >}}false{{< /colourtext >}}              |
+| Absolute Games    | {{< colourtext green >}}true{{< /colourtext >}}/{{< colourtext red >}}false{{< /colourtext >}}      |
+| Game Distribution | {{< colourtext red >}}false{{< /colourtext >}}              |
+| Mock              | {{< colourtext red >}}false{{< /colourtext >}}              |
 
 ### **ID игрока**
 
@@ -207,7 +208,7 @@ bridge.player.isAuthorized
 bridge.player.id
 ~~~
 
-Если авторизация поддерживается на платформе и игрок авторизован в данный момент – возвращает его ID на платформе, иначе — `null`.
+Если авторизация поддерживается на платформе и игрок авторизован в данный момент – возвращает его ID на платформе, иначе — {{< colourtext red  >}}null{{< /colourtext >}}.
 
 ### **Имя игрока**
 
@@ -217,12 +218,12 @@ bridge.player.name
 
 | Платформа         | Возможные значения                                                                      |
 |-------------------|-----------------------------------------------------------------------------------------|
-| VK                | Имя игрока                                                                              |
-| Yandex            | Если игрок авторизован и дал игре доступ к личной информации — имя игрока, иначе — `null` |
-| Crazy Games       | `null`                                                                                    |
-| Absolute Games    | Если игрок авторизован — имя игрока, иначе — `null`                                       |
-| Game Distribution | `null`                                                                                    |
-| Mock              | `null`                                                                                    |
+| VK                | `Имя игрока`                                                                              |
+| Yandex            | Если игрок авторизован и дал игре доступ к личной информации — `имя игрока`, иначе — {{< colourtext red  >}}null{{< /colourtext >}} |
+| Crazy Games       | {{< colourtext red  >}}null{{< /colourtext >}}                                                                                    |
+| Absolute Games    | Если игрок авторизован — `имя игрока`, иначе — {{< colourtext red  >}}null{{< /colourtext >}}                                       |
+| Game Distribution | {{< colourtext red  >}}null{{< /colourtext >}}                                                                                    |
+| Mock              | {{< colourtext red  >}}null{{< /colourtext >}}                                                                                    |
 
 ### **Аватар игрока**
 
@@ -234,12 +235,12 @@ bridge.player.photos
 
 | Платформа         | Возможные значения                                                                                                                 |
 |-------------------|------------------------------------------------------------------------------------------------------------------------------------|
-| VK                | Массив ссылок на изображения                                                                                                       |
-| Yandex            | Если игрок авторизован в данный момент и дал игре доступ к личной информации — массив ссылок на изображения, иначе — пустой массив |
-| Crazy Games       | Пустой массив                                                                                                                      |
-| Absolute Games    | Если игрок авторизован в данный момент — массив ссылок на изображения, иначе — пустой массив                                       |
-| Game Distribution | Пустой массив                                                                                                                      |
-| Mock              | Пустой массив                                                                                                                      |
+| VK                | `Массив ссылок на изображения`                                                                                                       |
+| Yandex            | Если игрок авторизован в данный момент и дал игре доступ к личной информации — `массив ссылок на изображения`, иначе — `пустой массив` |
+| Crazy Games       | `Пустой массив`                                                                                                                      |
+| Absolute Games    | Если игрок авторизован в данный момент — `массив ссылок на изображения`, иначе — `пустой массив`                                       |
+| Game Distribution | `Пустой массив`                                                                                                                      |
+| Mock              | `Пустой массив`                                                                                                                      |
 
 ### **Авторизация игрока**
 
@@ -262,12 +263,12 @@ bridge.player.authorize(authorizationOptions)
 
 | Платформа         | Возможные значения                                                                                                                                                           |
 |-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| VK                | `resolved`                                                                                                                                                                   |
-| Yandex            | Если игрок уже авторизован — `resolved`. Если не авторизован — показывается диалоговое окно авторизации. Далее `resolved` / `rejected` зависит от того авторизуется игрок или нет. |
-| Crazy Games       | `rejected`                                                                                                                                                                     |
-| Absolute Games    | Если игрок уже авторизован или открылось окно авторизации — `resolved`. После авторизации происходит релоад страницы.  `rejected` в случае ошибки.                               |
-| Game Distribution | `rejected`                                                                                                                                                                     |
-| Mock              | `rejected`                                                                                                                                                                     |
+| VK                | {{< colourtext green >}}resolved{{< /colourtext >}}                                                                                                                                                                   |
+| Yandex            | Если игрок уже авторизован — {{< colourtext green >}}resolved{{< /colourtext >}}. Если не авторизован — `показывается диалоговое окно авторизации`. Далее {{< colourtext green >}}resolved{{< /colourtext >}} / {{< colourtext red >}}rejected{{< /colourtext >}} зависит от того авторизуется игрок или нет. |
+| Crazy Games       | {{< colourtext red >}}rejected{{< /colourtext >}}                                                                                                                                                                     |
+| Absolute Games    | Если игрок уже авторизован или открылось окно авторизации — {{< colourtext green >}}resolved{{< /colourtext >}}. После авторизации происходит релоад страницы.  {{< colourtext red >}}rejected{{< /colourtext >}} в случае ошибки.                               |
+| Game Distribution | {{< colourtext red >}}rejected{{< /colourtext >}}                                                                                                                                                                     |
+| Mock              | {{< colourtext red >}}rejected{{< /colourtext >}}                                                                                                                                                                     |
 
 ## **Информация об игре**
 
@@ -314,12 +315,12 @@ bridge.storage.isSupported(storageType)
 
 | Платформа         | local_storage | platform_internal |
 |-------------------|---------------|-------------------|
-| VK                | `true`          | `true`              |
-| Yandex            | `true`          | `true`              |
-| Crazy Games       | `true`          | `false`             |
-| Absolute Games    | `true`          | `true`              |
-| Game Distribution | `true`          | `false`             |
-| Mock              | `true`          | `false`             |
+| VK                | {{< colourtext green >}}true{{< /colourtext >}}          | {{< colourtext green >}}true{{< /colourtext >}}              |
+| Yandex            | {{< colourtext green >}}true{{< /colourtext >}}          | {{< colourtext green >}}true{{< /colourtext >}}              |
+| Crazy Games       | {{< colourtext green >}}true{{< /colourtext >}}          | {{< colourtext red >}}false{{< /colourtext >}}             |
+| Absolute Games    | {{< colourtext green >}}true{{< /colourtext >}}          | {{< colourtext green >}}true{{< /colourtext >}}              |
+| Game Distribution | {{< colourtext green >}}true{{< /colourtext >}}          | {{< colourtext red >}}false{{< /colourtext >}}             |
+| Mock              | {{< colourtext green >}}true{{< /colourtext >}}          | {{< colourtext red >}}false{{< /colourtext >}}             |
 
 {{< hint danger >}}
 **⚠️ Предупреждение**\
@@ -336,12 +337,12 @@ bridge.storage.isAvailable(storageType)
 
 | Платформа         | local_storage | platform_internal                               |
 |-------------------|---------------|-------------------------------------------------|
-| VK                | `true`        | `true`                                            |
-| Yandex            | `true`        | Если игрок авторизован — `true`, если нет — `false` |
-| Crazy Games       | `true`        | `false`                                           |
-| Absolute Games    | `true`        | Если игрок авторизован — `true`, если нет — `false` |
-| Game Distribution | `true`        | `false`                                           |
-| Mock              | `true`        | `false`                                           |
+| VK                | {{< colourtext green >}}true{{< /colourtext >}}        | {{< colourtext green >}}true{{< /colourtext >}}                                            |
+| Yandex            | {{< colourtext green >}}true{{< /colourtext >}}        | Если игрок авторизован — {{< colourtext green >}}true{{< /colourtext >}}, если нет — {{< colourtext red >}}false{{< /colourtext >}} |
+| Crazy Games       | {{< colourtext green >}}true{{< /colourtext >}}        | {{< colourtext red >}}false{{< /colourtext >}}                                           |
+| Absolute Games    | {{< colourtext green >}}true{{< /colourtext >}}        | Если игрок авторизован — {{< colourtext green >}}true{{< /colourtext >}}, если нет — {{< colourtext red >}}false{{< /colourtext >}} |
+| Game Distribution | {{< colourtext green >}}true{{< /colourtext >}}        | {{< colourtext red >}}false{{< /colourtext >}}                                           |
+| Mock              | {{< colourtext green >}}true{{< /colourtext >}}        | {{< colourtext red >}}false{{< /colourtext >}}                                           |
 
 ### **Загрузка данных**
 
@@ -441,14 +442,14 @@ bridge.storage.delete('key', options)
 bridge.advertisement.isBannerSupported
 ~~~
 
-| Платформа         | Возможные значения                       | platform_internal                               |
-|-------------------|------------------------------------------|-------------------------------------------------|
-| VK                | На мобильных — `true`, на десктопе — false | `true`                                            |
-| Yandex            | `true`                                     | Если игрок авторизован — `true`, если нет — `false` |
-| Crazy Games       | `true`                                     | `false`                                           |
-| Absolute Games    | `false`                                    | Если игрок авторизован — `true`, если нет — `false` |
-| Game Distribution | `true`                                     | `false`                                           |
-| Mock              | `false`                                    | `false`                                           |
+| Платформа         | Возможные значения                       |
+|-------------------|------------------------------------------|
+| VK                | На мобильных — {{< colourtext green >}}true{{< /colourtext >}}, на десктопе — false |
+| Yandex            | {{< colourtext green >}}true{{< /colourtext >}}                                     |
+| Crazy Games       | {{< colourtext green >}}true{{< /colourtext >}}                                     |
+| Absolute Games    | {{< colourtext red >}}false{{< /colourtext >}}                                    |
+| Game Distribution | {{< colourtext green >}}true{{< /colourtext >}}                                     |
+| Mock              | {{< colourtext red >}}false{{< /colourtext >}}                                    |
 
 {{< hint info >}}
 **📝 Примечание**\
@@ -601,7 +602,7 @@ bridge.advertisement.on(bridge.EVENT_NAME.REWARDED_STATE_CHANGED, state => conso
 
 {{< hint danger >}}
 **⚠️ Предупреждение**\
-Награду игроку нужно выдавать только при наступлении состояния rewarded.
+Награду игроку нужно выдавать только при наступлении состояния `rewarded`.
 {{< /hint >}}
 
 #### Показать рекламу
@@ -622,12 +623,12 @@ bridge.social.isShareSupported
 
 | Платформа         | Возможные значения |
 |-------------------|--------------------|
-| VK                | `true`             |
-| Yandex            | `false`            |
-| Crazy Games       | `false`            |
-| Absolute Games    | `false`            |
-| Game Distribution | `false`            |
-| Mock              | `false`            |
+| VK                | {{< colourtext green >}}true{{< /colourtext >}}             |
+| Yandex            | {{< colourtext red >}}false{{< /colourtext >}}            |
+| Crazy Games       | {{< colourtext red >}}false{{< /colourtext >}}            |
+| Absolute Games    | {{< colourtext red >}}false{{< /colourtext >}}            |
+| Game Distribution | {{< colourtext red >}}false{{< /colourtext >}}            |
+| Mock              | {{< colourtext red >}}false{{< /colourtext >}}            |
 
 ~~~
 let shareOptions = {
@@ -654,12 +655,12 @@ bridge.social.isJoinCommunitySupported
 
 | Платформа         | Возможные значения |
 |-------------------|--------------------|
-| VK                | `true`             |
-| Yandex            | `false`            |
-| Crazy Games       | `false`            |
-| Absolute Games    | `false`            |
-| Game Distribution | `false`            |
-| Mock              | `false`            |
+| VK                | {{< colourtext green >}}true{{< /colourtext >}}             |
+| Yandex            | {{< colourtext red >}}false{{< /colourtext >}}            |
+| Crazy Games       | {{< colourtext red >}}false{{< /colourtext >}}            |
+| Absolute Games    | {{< colourtext red >}}false{{< /colourtext >}}            |
+| Game Distribution | {{< colourtext red >}}false{{< /colourtext >}}            |
+| Mock              | {{< colourtext red >}}false{{< /colourtext >}}            |
 
 ~~~
 let joinCommunityOptions = {
@@ -684,12 +685,12 @@ bridge.social.isInviteFriendsSupported
 
 | Платформа         | Возможные значения |
 |-------------------|--------------------|
-| VK                | `true`             |
-| Yandex            | `false`            |
-| Crazy Games       | `false`            |
-| Absolute Games    | `false`            |
-| Game Distribution | `false`            |
-| Mock              | `false`            |
+| VK                | {{< colourtext green >}}true{{< /colourtext >}}             |
+| Yandex            | {{< colourtext red >}}false{{< /colourtext >}}            |
+| Crazy Games       | {{< colourtext red >}}false{{< /colourtext >}}            |
+| Absolute Games    | {{< colourtext red >}}false{{< /colourtext >}}            |
+| Game Distribution | {{< colourtext red >}}false{{< /colourtext >}}            |
+| Mock              | {{< colourtext red >}}false{{< /colourtext >}}            |
 
 ~~~
 bridge.social.inviteFriends()
@@ -711,12 +712,12 @@ bridge.social.isCreatePostSupported
 
 | Платформа         | Возможные значения |
 |-------------------|--------------------|
-| VK                | `true`             |
-| Yandex            | `false`            |
-| Crazy Games       | `false`            |
-| Absolute Games    | `false`            |
-| Game Distribution | `false`            |
-| Mock              | `false`            |
+| VK                | {{< colourtext green >}}true{{< /colourtext >}}             |
+| Yandex            | {{< colourtext red >}}false{{< /colourtext >}}            |
+| Crazy Games       | {{< colourtext red >}}false{{< /colourtext >}}            |
+| Absolute Games    | {{< colourtext red >}}false{{< /colourtext >}}            |
+| Game Distribution | {{< colourtext red >}}false{{< /colourtext >}}            |
+| Mock              | {{< colourtext red >}}false{{< /colourtext >}}            |
 
 ~~~
 let createPostOptions = {
@@ -744,12 +745,12 @@ bridge.social.isAddToFavoritesSupported
 
 | Платформа         | Возможные значения |
 |-------------------|--------------------|
-| VK                | `true`             |
-| Yandex            | `false`            |
-| Crazy Games       | `false`            |
-| Absolute Games    | `false`            |
-| Game Distribution | `false`            |
-| Mock              | `false`            |
+| VK                | {{< colourtext green >}}true{{< /colourtext >}}             |
+| Yandex            | {{< colourtext red >}}false{{< /colourtext >}}            |
+| Crazy Games       | {{< colourtext red >}}false{{< /colourtext >}}            |
+| Absolute Games    | {{< colourtext red >}}false{{< /colourtext >}}            |
+| Game Distribution | {{< colourtext red >}}false{{< /colourtext >}}            |
+| Mock              | {{< colourtext red >}}false{{< /colourtext >}}            |
 
 ~~~
 bridge.social.addToFavorites()
@@ -771,12 +772,12 @@ bridge.social.isAddToHomeScreenSupported
 
 | Платформа         | Возможные значения                                                                                            |
 |-------------------|---------------------------------------------------------------------------------------------------------------|
-| VK                | Android: `true`.  Desktop, iOS: `false`.                                                                          |
-| Yandex            | `true` / `false` Доступность опции зависит от девайса игрока, внутренних правил браузера и ограничений платформы. |
-| Crazy Games       | `false`                                                                                                         |
-| Absolute Games    | `false`                                                                                                         |
-| Game Distribution | `false`                                                                                                         |
-| Mock              | `false`                                                                                                         |
+| VK                | Android: {{< colourtext green >}}true{{< /colourtext >}}.<br/>Desktop, iOS: {{< colourtext red >}}false{{< /colourtext >}}.                                                                          |
+| Yandex            | {{< colourtext green >}}true{{< /colourtext >}} / {{< colourtext red >}}false{{< /colourtext >}}<br/> Доступность опции зависит от девайса игрока, внутренних правил браузера и ограничений платформы. |
+| Crazy Games       | {{< colourtext red >}}false{{< /colourtext >}}                                                                                                         |
+| Absolute Games    | {{< colourtext red >}}false{{< /colourtext >}}                                                                                                         |
+| Game Distribution | {{< colourtext red >}}false{{< /colourtext >}}                                                                                                         |
+| Mock              | {{< colourtext red >}}false{{< /colourtext >}}                                                                                                         |
 
 ~~~
 bridge.social.addToHomeScreen()
@@ -798,12 +799,12 @@ bridge.social.isRateSupported
 
 | Платформа         | Возможные значения |
 |-------------------|--------------------|
-| VK                | `false`             |
-| Yandex            | `true`            |
-| Crazy Games       | `false`            |
-| Absolute Games    | `false`            |
-| Game Distribution | `false`            |
-| Mock              | `false`            |
+| VK                | {{< colourtext red >}}false{{< /colourtext >}}             |
+| Yandex            | {{< colourtext green >}}true{{< /colourtext >}}            |
+| Crazy Games       | {{< colourtext red >}}false{{< /colourtext >}}            |
+| Absolute Games    | {{< colourtext red >}}false{{< /colourtext >}}            |
+| Game Distribution | {{< colourtext red >}}false{{< /colourtext >}}            |
+| Mock              | {{< colourtext red >}}false{{< /colourtext >}}            |
 
 ~~~
 bridge.social.rate()
@@ -825,12 +826,12 @@ bridge.social.isExternalLinksAllowed
 
 | Платформа         | Возможные значения |
 |-------------------|--------------------|
-| VK                | `true`             |
-| Yandex            | `false`            |
-| Crazy Games       | `true`            |
-| Absolute Games    | `false`            |
-| Game Distribution | `false`            |
-| Mock              | `false`            |
+| VK                | {{< colourtext green >}}true{{< /colourtext >}}             |
+| Yandex            | {{< colourtext red >}}false{{< /colourtext >}}            |
+| Crazy Games       | {{< colourtext green >}}true{{< /colourtext >}}            |
+| Absolute Games    | {{< colourtext red >}}false{{< /colourtext >}}            |
+| Game Distribution | {{< colourtext red >}}false{{< /colourtext >}}            |
+| Mock              | {{< colourtext red >}}false{{< /colourtext >}}            |
 
 ## **Лидерборды**
 
@@ -842,12 +843,12 @@ bridge.leaderboard.isSupported
 
 | Платформа         | Возможные значения |
 |-------------------|--------------------|
-| VK                | `true*`              |
-| Yandex            | `true`              |
-| Crazy Games       | `false`              |
-| Absolute Games    | `false`              |
-| Game Distribution | `false`              |
-| Mock              | `false`              |
+| VK                | {{< colourtext orange >}}true*{{< /colourtext >}}             |
+| Yandex            | {{< colourtext green >}}true{{< /colourtext >}}              |
+| Crazy Games       | {{< colourtext red >}}false{{< /colourtext >}}              |
+| Absolute Games    | {{< colourtext red >}}false{{< /colourtext >}}              |
+| Game Distribution | {{< colourtext red >}}false{{< /colourtext >}}              |
+| Mock              | {{< colourtext red >}}false{{< /colourtext >}}              |
 
 {{< hint danger >}}
 **⚠️ Предупреждение**\
@@ -864,12 +865,12 @@ bridge.leaderboard.isNativePopupSupported
 
 | Платформа         | Возможные значения                            |
 |-------------------|-----------------------------------------------|
-| VK                | Android, iOS, Mobile Web: `true` Desktop: `false` |
-| Yandex            | `false`                                         |
-| Crazy Games       | `false`                                         |
-| Absolute Games    | `false`                                         |
-| Game Distribution | `false`                                         |
-| Mock              | `false`                                         |
+| VK                | Android, iOS, Mobile Web: {{< colourtext green >}}true{{< /colourtext >}}<br/>Desktop: {{< colourtext red >}}false{{< /colourtext >}} |
+| Yandex            | {{< colourtext red >}}false{{< /colourtext >}}                                         |
+| Crazy Games       | {{< colourtext red >}}false{{< /colourtext >}}                                         |
+| Absolute Games    | {{< colourtext red >}}false{{< /colourtext >}}                                         |
+| Game Distribution | {{< colourtext red >}}false{{< /colourtext >}}                                         |
+| Mock              | {{< colourtext red >}}false{{< /colourtext >}}                                         |
 
 ~~~
 // Показать нативный popup
@@ -900,12 +901,12 @@ bridge.leaderboard.isSetScoreSupported
 
 | Платформа         | Возможные значения |
 |-------------------|--------------------|
-| VK                | false              |
-| Yandex            | true               |
-| Crazy Games       | false              |
-| Absolute Games    | false              |
-| Game Distribution | false              |
-| Mock              | false              |
+| VK                | {{< colourtext red >}}false{{< /colourtext >}}              |
+| Yandex            | {{< colourtext green >}}true{{< /colourtext >}}               |
+| Crazy Games       | {{< colourtext red >}}false{{< /colourtext >}}              |
+| Absolute Games    | {{< colourtext red >}}false{{< /colourtext >}}              |
+| Game Distribution | {{< colourtext red >}}false{{< /colourtext >}}              |
+| Mock              | {{< colourtext red >}}false{{< /colourtext >}}              |
 
 ~~~
 let setScoreOptions = {
@@ -933,12 +934,12 @@ bridge.leaderboard.isGetScoreSupported
 
 | Платформа         | Возможные значения |
 |-------------------|--------------------|
-| VK                | false              |
-| Yandex            | true               |
-| Crazy Games       | false              |
-| Absolute Games    | false              |
-| Game Distribution | false              |
-| Mock              | false              |
+| VK                | {{< colourtext red >}}false{{< /colourtext >}}              |
+| Yandex            | {{< colourtext green >}}true{{< /colourtext >}}               |
+| Crazy Games       | {{< colourtext red >}}false{{< /colourtext >}}              |
+| Absolute Games    | {{< colourtext red >}}false{{< /colourtext >}}              |
+| Game Distribution | {{< colourtext red >}}false{{< /colourtext >}}              |
+| Mock              | {{< colourtext red >}}false{{< /colourtext >}}              |
 
 ~~~
 let getScoreOptions = {
@@ -955,7 +956,7 @@ bridge.leaderboard.getScore(getScoreOptions)
     })
 ~~~
 
-### Записи таблицы
+### **Записи таблицы**
 
 ~~~
 bridge.leaderboard.isGetEntriesSupported
@@ -965,12 +966,12 @@ bridge.leaderboard.isGetEntriesSupported
 
 | Платформа         | Возможные значения |
 |-------------------|--------------------|
-| VK                | false              |
-| Yandex            | true               |
-| Crazy Games       | false              |
-| Absolute Games    | false              |
-| Game Distribution | false              |
-| Mock              | false              |
+| VK                | {{< colourtext red >}}false{{< /colourtext >}}              |
+| Yandex            | {{< colourtext green >}}true{{< /colourtext >}}               |
+| Crazy Games       | {{< colourtext red >}}false{{< /colourtext >}}              |
+| Absolute Games    | {{< colourtext red >}}false{{< /colourtext >}}              |
+| Game Distribution | {{< colourtext red >}}false{{< /colourtext >}}              |
+| Mock              | {{< colourtext red >}}false{{< /colourtext >}}              |
 
 ~~~
 let getEntriesOptions = {
@@ -993,5 +994,7 @@ bridge.leaderboard.getEntries(getEntriesOptions)
     })
 ~~~
 
+<div align = center>
 {{< button relref="/" >}}Введение{{< /button >}}
 {{< button relref="/docs/construct" >}}Construct{{< /button >}}
+<div/>

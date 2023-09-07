@@ -3,6 +3,7 @@ languageCode = 'en-us'
 title = 'Instant Games Bridge'
 theme = "hugo-book"
 
+# html support in md files
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
@@ -12,12 +13,10 @@ theme = "hugo-book"
 #[languages.en]
 #  languageName = 'English'
 #  contentDir = 'content.en'
-#  weight = 1
 #  
 #[languages.ru]
 #  languageName = 'Russian'
 #  contentDir = 'content.ru'
-#  weight = 10
 
 [params]
   # (Optional, default light) Sets color theme: light, dark or auto.
@@ -37,6 +36,6 @@ theme = "hugo-book"
   # You can also set value to "*" to render all sections to menu
   # BookSection = 'docs'
   
-   # /!\ This is an experimental feature, might be removed or changed at any time
+  # /!\ This is an experimental feature, might be removed or changed at any time
   # (Optional, experimental, default false) Enables service worker that caches visited pages and resources for offline use.
   # BookServiceWorker = true

@@ -3,11 +3,11 @@ title: Введение
 type: docs
 ---
 
-# Введение
+# **Введение**
 
 *Instant Games Bridge — единый бесплатный SDK для публикации HTML5-игр на разных платформах.*
 
-## Поддерживаемые платформы
+## **Поддерживаемые платформы**
 
 - [VK](https://vk.com/)
 - [Yandex Games](https://yandex.com/games/)
@@ -17,7 +17,7 @@ type: docs
 - Возможность интегрировать на собственный сайт
 - Другие в процессе
 
-## Возможности
+## **Возможности**
 
 - Сохранение и загрузка прогресса игрока
 - Монетизация: Banner, Interstitial, Rewarded
@@ -27,15 +27,13 @@ type: docs
 - И другое
 
 
-## Полезные ссылки
+## **Полезные ссылки**
 
 - Роадмап: [trello.com](https://trello.com/b/NjF29vTW/instant-games-bridge-roadmap)
 - Телеграм-чат: [@instant_games_bridge](https://t.me/instant_games_bridge)
 - Телеграм-чат про разработку игр под разные веб-платформы: [@WebGamedev](https://t.me/WebGamedev)
 - Поддержать проект: [cloudtips.ru](https://pay.cloudtips.ru/p/c6291c62)
 
+<div align = center>
 {{< button relref="/docs/js-core" >}}JS Core{{< /button >}}
-{{< button relref="/docs/construct" >}}Construct{{< /button >}}
-{{< button relref="/docs/godot" >}}Godot{{< /button >}}
-{{< button relref="/docs/unity" >}}Unity{{< /button >}}
-{{< button relref="/docs/defold" >}}Defold{{< /button >}}
+<div/>
